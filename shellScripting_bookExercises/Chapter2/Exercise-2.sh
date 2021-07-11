@@ -9,3 +9,15 @@ comment
 
 # script:
 
+if [ -d "$1" ]
+then
+    echo "It is a directory."
+    exit 1
+elif [ -e "$1" ]
+then
+    echo "It is a file."
+    exit 0
+else
+    echo "it is some othe type of file."
+    exit 2
+fi
