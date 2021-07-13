@@ -4,7 +4,7 @@ Shell scripts developed in order to automate different tasks, access to folders 
 
 ### Others
 
-The repos also containing different solved exercises from the book "Shell Scripting" from Jason Cannon and different code snippets of the book.
+The repos also containe different solved exercises from the book "Shell Scripting" from Jason Cannon and different code snippets of the book.
 
 ### Shell syntax, examples and more
 
@@ -21,7 +21,7 @@ Example:
 alias command_name='action'
 ```
 
-#### Variables
+#### Variables:
 
 As in any other langeage, the variable is defined with its name follow by "=" and the value. The variable names are defined in uppercase without spaces separating the name with the equal sign as well as between the equal sign and the value.
 
@@ -30,29 +30,59 @@ VARIABLE_NAME="value"
 
 #Example:
 NAME="Wario"
+
 echo "$NAME"
+#Output: Wario
 ```
 It is good practice to wrap the variable between curly brackets to avoid errors.
 
-#### Functions
+#### Functions:
+
+There are two ways to define a function that are similar to other programming languages:
+
+```shell
+function function_name () {
+    #Code
+}
+
+function_name () {
+    #Code
+}
+```
+
+The functions work as in any other programming language with the difference that the parameters are accepted as if we were calling another shell Script (with the $1, $2...).
+
+Calling the function doesn't require the use of brackets "()".
+
+```shell
+function hello () {
+    echo "Hello $1, how are you?"
+}
+
+hello Wario
+
+#output: Hello Wario, how are you?
+```
+
+#### If-Statement:
 
 ```shell
 #...
 ```
 
-#### If-Statements
+#### Conditional operators:
 
 ```shell
 #...
 ```
 
-#### Conditionals
+#### Loops:
 
 ```shell
 #...
 ```
 
-#### Exit command
+#### Exit command:
 
 It is a value between 0 to 255, where 0 means successfully runned command, and it is accessed with "$?".
 
@@ -72,4 +102,20 @@ else
     echo "There was a problem.
     exit 1
 fi
+```
+
+#### environment variables
+
+```shell
+$SHELL #Output: /user/bin/bash
+$USERDOMAIN #Output: demoUser
+$PATH #Output: /usr/local/bin:/usr/bin:
+$LANG #Output: en_US.UTF-8
+$PWD #Output: /home/demoUser
+$HOMEPATH #Output: /home/demoUser
+$LOGNAME #Output: /user/bin/bash
+$LOGNAME #Output: /user/bin/bash
+$LOGNAME #Output: /user/bin/bash
+$(date) #Output: Current date
+$( date '+%F_%H:%M:%S' ) #Output: Formated current date
 ```
