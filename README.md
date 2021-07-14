@@ -25,6 +25,8 @@ alias command_name='action'
 
 As in any other langeage, the variable is defined with its name follow by "=" and the value. The variable names are defined in uppercase without spaces separating the name with the equal sign as well as between the equal sign and the value.
 
+It is good practice to wrap the variable between curly brackets to avoid errors.
+
 ```shell
 VARIABLE_NAME="value"
 
@@ -34,7 +36,12 @@ NAME="Wario"
 echo "$NAME"
 #Output: Wario
 ```
-It is good practice to wrap the variable between curly brackets to avoid errors.
+
+It is possible to create local variables usring the local command. This command can only be used within a functions.
+
+```shell
+local VARIABLE_NAME="value"
+```
 
 #### Functions:
 
@@ -149,7 +156,7 @@ $( date '+%F_%H:%M:%S' )
 
 #### Run commands in new bash shells:
 
-In case we want to invoke multiple bash terminals to run diferent functions at once, there is this solution:
+In case we want to invoke temporally multiple bash terminals to run different functions at once, there is this solution:
 
 ```shell
 bash --rcfile <(COMMAND_NAME)
