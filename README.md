@@ -82,10 +82,31 @@ fi
 
 #### Conditional operators:
 
-|code|description|
+|File operators|Description|
 |---|---|
-|-e|Return true if the file exists|
-|-d|Return true if the file is a directory|
+|-e FILE|Return true if the file exists.|
+|-d FILE|Return true if the file is a directory.|
+|-f FILE|Return true if file exists and is a regular file.|
+|-r FILE|Return true if the file is readable by you.|
+|-s FILE|Return true if the file exists and is not empty.|
+|-w FILE|Return true if the file is writable by you.|
+|-x FILE|Return true if the file is executable by you.|
+
+|String operators|Description|
+|---|---|
+|-z STRING|Return true if the string is empty.|
+|-n STRING|Return true if the string is not empty.|
+|STRING1 != STRING2|Return true if the strings are not equal.|
+|STRING1 == STRING2|Return true if the strings are equal.|
+
+|Arithmetic operators|Description|
+|---|---|
+|arg1 -eq arg2|Return true if arg1 is equal to arg2.|
+|arg1 -ne arg2|Return true if arg1 is not equal to arg2.|
+|arg1 -lt arg2|Return true if arg1 is less than arg2.|
+|arg1 -le arg2|Return true if arg1 is less than or equal to arg2.|
+|arg1 -gt arg2|Return true if arg1 is greater than arg2.|
+|arg1 -ge arg2|Return true if art1 is greater than or equal to arg2.|
 
 #### Loops:
 
@@ -192,4 +213,4 @@ Instead of creating your own Character classes, it is possible to use existing o
 
 ### Others
 
-The repo also containe different solved exercises from the book "Shell Scripting" from Jason Cannon and different code snippets of the book.
+The repo also contains different solved exercises from the book “Shell Scripting” from Jason Cannon and different code snippets of the book.
