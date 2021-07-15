@@ -1,10 +1,6 @@
-# Shell Scripts
+# Shell Scripts (BASH)
 
-Shell scripts developed in order to automate different tasks, access to folders and help at deployments.
-
-### Others
-
-The repo also containe different solved exercises from the book "Shell Scripting" from Jason Cannon and different code snippets of the book.
+Shell syntax and scripts developed in order to automate different tasks, access to directories and help at deployments.
 
 ### Shell syntax, examples and more
 
@@ -161,3 +157,39 @@ In case we want to invoke temporally multiple bash terminals to run different fu
 ```shell
 bash --rcfile <(COMMAND_NAME)
 ```
+
+#### Wildcards:
+
+The wildcards are ways to match files and directory names and select a file or a set of files. It is usually used in conjunction with other commands such as ls, rm, cp, mv... The two main wildcards are "*" and "?".
+
+In the following example, the star will help us store a list of all the .txt files found in the current directory.
+```shell
+TEXT_FILES=*.txt
+```
+
+The interrogation sign helps us to match every file with a single character as name. We can add as many interrogation signs a we decide to match longer names o mix it with letters or numbers in order to specify the search.
+```shell
+TEXT_FILES=?.txt # Will store any file with a name of a single character.
+
+TEXT_FILES=a??.txt # Will store any file with  three characters name that start with the letter "a".
+```
+
+- ##### Character Classes:
+
+It is possible to create specific patterns to make specific searches. These patterns are Character Classes. For example, [aeiou] will match any vowel.
+
+<!-- ```shell
+
+``` -->
+
+- ##### Ranges:
+
+It is also possible to simplify the character classes using ranges which consist on two numbers or letter with a hyphen in between. As an example, [1-9] would macht any number from 1 to 9.
+
+- ##### Named Character Classes:
+
+Instead of creating your own Character classes, it is possible to use existing ones with predefined behavior.
+
+### Others
+
+The repo also containe different solved exercises from the book "Shell Scripting" from Jason Cannon and different code snippets of the book.
