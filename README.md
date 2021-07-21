@@ -6,19 +6,21 @@ Shell syntax and scripts developed in order to automate different tasks, access 
 
 ### Content:
 
-- [Variables](#Variables:)
-- [Array and Associative Arrays](#Array-and-Associative-Arrays:)
-- [Functions](#Functions:)
-- [If-Statement](#If-Statement:)
-- [Conditional operators](#Conditional-operators:)
-- [Loops](#Loops:)
-- [Exit command](#Exit-command:)
-- [Environment variables](#Environment-variables:)
-- [Run commands in new bash shells](#Run-commands-in-new-bash-shells:)
-- [Wildcards](#Wildcards:)
-    - [Character Classes](#Character-Classes:)
-    - [Ranges](#Ranges:)
-    - [Named Character Classes](#Named-Character-Classes:)
+- [Variables](#variables)
+- [Array and Associative Arrays](#array-and-associative-arrays)
+- [Functions](#functions)
+- [If-Statement](#if-statement)
+- [Case-Statement](#case-statement)
+- [Conditional operators](#conditional-operators)
+- [Loops](#loops)
+- [Exit command](#exit-command)
+- [Environment variables](#environment-variables)
+- [Run commands in new bash shells](#run-commands-in-new-bash-shells)
+- [Wildcards](#wildcards)
+    - [Character Classes](#character-classes)
+    - [Ranges](#ranges)
+    - [Named Character Classes](#named-character-classes)
+
 
 #### Adding permanent alias for the Git Bash on Windows:
 
