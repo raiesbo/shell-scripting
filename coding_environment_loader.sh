@@ -1,32 +1,30 @@
 #! /usr/bin/bash
 
-# Script to start the current project with VS Code
-# echo "Running script: $0"
+<<comment
+Script that allows to access and switch between the current projects using VS Code.
+echo "Running script: $0"
+comment
 
-
-OPTIONS="(1) php, (2) algo, (3) scripts"
+OPTIONS="(1) php, (2) algo, (3) scripts, (4) cv"
 
 declare -A projects
-projects=( ["test"]="random")
-projects["php"]=/d/ARCHIVOS\ DE\ PROGRAMAS/xampp/htdocs/tutorials
+projects["php"]=/d/"ARCHIVOS DE PROGRAMAS"/xampp/htdocs/tutorials
 projects["algo"]=/d/CODES/projects/JavaScriptDataStructuresAndAlgorithms
 projects["scripts"]=/d/CODES/projects/scripts
+projects["cv"]=d:/CODES/projects/raiesbo.github.io
 
 PHP_URL="D:/'ARCHIVOS DE PROGRAMAS'/xampp/htdocs/tutorials"
 ALGO_URL="D:/CODES/projects/JavaScriptDataStructuresAndAlgorithms"
 
-if [ "$1" ]
+if [ "${projects[$1]+abc}" == "abc" ]
 then
-    cd ${projects[$1]}
+    cd "${projects[$1]}"
     code .
+    exit 0
 else
-    echo "The options are: $OPTIONS"
+    echo "Select an option: $OPTIONS"
+    exit 1
 fi
-
-
-
-
-
 
 # How to add an alias permanently for the Git Bash
 

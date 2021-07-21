@@ -39,6 +39,37 @@ It is possible to create local variables usring the local command. This command 
 local VARIABLE_NAME="value"
 ```
 
+#### Array and Associative Arrays:
+
+An array allows us to store a collection of data as separated information in a single variable using the index as a reference. There are multiple ways to declare an array using shell.
+
+In the arrays the data is stored using a numeric based index while in the associarive arrays is used a string.
+
+The indirect way is adding directly a value with specific index.
+```shell
+ARRAY_NAME[index]=value
+```
+
+The explicit way is declaring a variable as an array and then adding the values as follows:
+```shell
+declare -A ARRAY_NAME
+
+ARRAY_NAME[index]=value
+```
+
+The last way to declare arrays is by a list of values in between brackets with a space as separation:
+```shell
+ARRAY_NAME=(valueOne valueTwo ... valueN)
+```
+
+In every case, in order to access the values we will be using the folloring syntax:
+
+```shell
+${ARRAY_NAME[index]}
+
+${ARRAY_NAME[$index]} # In case the index is also a variable
+```
+
 #### Functions:
 
 There are two ways to define a function that are similar to other programming languages:
