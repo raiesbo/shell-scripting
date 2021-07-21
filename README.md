@@ -2,7 +2,23 @@
 
 Shell syntax and scripts developed in order to automate different tasks, access to directories and help at deployments.
 
-### Shell syntax, examples and more
+## Shell syntax, examples and more
+
+### Content:
+
+- [Variables](#Variables:)
+- [Array and Associative Arrays](#Array-and-Associative-Arrays:)
+- [Functions](#Functions:)
+- [If-Statement](#If-Statement:)
+- [Conditional operators](#Conditional-operators:)
+- [Loops](#Loops:)
+- [Exit command](#Exit-command:)
+- [Environment variables](#Environment-variables:)
+- [Run commands in new bash shells](#Run-commands-in-new-bash-shells:)
+- [Wildcards](#Wildcards:)
+    - [Character Classes](#Character-Classes:)
+    - [Ranges](#Ranges:)
+    - [Named Character Classes](#Named-Character-Classes:)
 
 #### Adding permanent alias for the Git Bash on Windows:
 
@@ -110,6 +126,29 @@ else
     echo "The file is not a directory or doesn't exist."
 fi
 ```
+
+#### Case-Statement:
+
+Sometimes, instead of an If-Else statement, we can use what in other languages is known as "switch".
+
+```shell
+VAR="start"
+
+case $VAR in
+    start)
+        # Commands come here
+        ;;
+    stop)
+        # Commands come here
+        ;;
+    *)
+        # The "else" of the case statements // Commands come here
+        exit 1
+        ;;
+esac
+```
+
+
 
 #### Conditional operators:
 
