@@ -5,13 +5,14 @@ Script that allows to access and switch between the current projects using VS Co
 echo "Running script: $0"
 comment
 
-OPTIONS="(1) php, (2) algo, (3) scripts, (4) cv"
+OPTIONS="(1) php, (2) algo, (3) scripts, (4) cv, (5) next"
 
 declare -A projects
 projects["php"]=/d/"ARCHIVOS DE PROGRAMAS"/xampp/htdocs/tutorials
 projects["algo"]=/d/CODES/projects/JavaScriptDataStructuresAndAlgorithms
 projects["scripts"]=/d/CODES/projects/scripts
-projects["cv"]=d:/CODES/projects/raiesbo.github.io
+projects["cv"]=/d/CODES/projects/raiesbo.github.io
+projects["next"]=/d/codes/projects/random/next_contentful 
 
 PHP_URL="D:/'ARCHIVOS DE PROGRAMAS'/xampp/htdocs/tutorials"
 ALGO_URL="D:/CODES/projects/JavaScriptDataStructuresAndAlgorithms"

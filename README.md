@@ -1,6 +1,6 @@
 # Shell Scripts (BASH)
 
-Shell syntax and scripts developed in order to automate different tasks, access to directories and help at deployments.
+Shell script examples developed in order to automate different tasks, access directly to directories and help at deployments. Here you can also find a syntax summarize where to understand the most basic elements that form a Shell script.
 
 ## Shell syntax, examples and more
 
@@ -61,7 +61,7 @@ local VARIABLE_NAME="value"
 
 An array allows us to store a collection of data as separated information in a single variable using the index as a reference. There are multiple ways to declare an array using shell.
 
-In the arrays the data is stored using a numeric based index while in the associarive arrays is used a string.
+In the arrays the data is stored using a numeric based index while in the associative arrays is used a string.
 
 The indirect way is adding directly a value with specific index.
 ```shell
@@ -102,7 +102,7 @@ function_name () {
 }
 ```
 
-The functions work as in any other programming language with the difference that the parameters are accepted as if we were calling another shell Script (with the $1, $2...). The functions dont return any value as we can observe in other programming languages but they return true (when the exit code equals "0") or false (when the exit code equals any value between 1 and 255).
+The functions work as in any other programming language with the difference that the parameters are accepted as if we were calling another shell Script (with the $1, $2...). The functions don't return any value as we can observe in other programming languages, but they return true (when the exit code equals "0") or false (when the exit code equals any value between 1 and 255).
 
 Calling the function doesn't require the use of brackets "()".
 
@@ -131,7 +131,7 @@ fi
 
 #### Case-Statement:
 
-Sometimes, instead of an If-Else statement, we can use what in other languages is known as "switch".
+Sometimes, instead of an If-Else statement, we can use what in other languages is known as “switch”.
 
 ```shell
 VAR="start"
@@ -200,7 +200,7 @@ done
 
 #### Exit command:
 
-It is a value between 0 to 255, where 0 means successfully runned command, and it is accessed with "$?". This is also the only option of returning a value that the functions or any othe process has with shell.
+It is a value between 0 and 255, where 0 means successfully executed command, and it is accessed with "$?". This is also the only option of returning a value that the functions or any other process has with shell.
 
 Whenever the script reaches an exit command, it will stop running.
 

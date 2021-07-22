@@ -7,6 +7,7 @@ comment
 declare -A links
 links["code"]=/d/CODES/projects/scripts/coding_environment_loader.sh
 links["deploy"]=/d/CODES/projects/scripts/firebase_deployment.sh
+links["goo"]=/d/CODES/projects/scripts/chrome_init.sh
 
 # if [ "$1" == "code" ]; then
 #     "/d/CODES/projects/scripts/coding_environment_loader.sh" $2
@@ -21,7 +22,7 @@ then
     ${links["$1"]} $2
     exit 0
 else
-    echo "Select an option: (1) code, (2) deploy."
+    echo "Select an option: (1) code, (2) deploy, (3) goo."
     exit 1
 fi
 
